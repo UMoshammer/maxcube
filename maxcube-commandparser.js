@@ -335,7 +335,7 @@ function decodeDeviceWallThermostat(payload) {
       8       1     2C          Temperature setpoint, 2Ch = 44d; 44/2=22 deg. C
       9       2     858B        Date until (05-09-2011) (see Encoding/Decoding date/time)
       B       1     2E          Time until (23:00) (see Encoding/Decoding date/time)
-      D       1     219         actual Temperature
+      D       1     219         actual Temperature in 10th a degree. First bit is stored in the MSB bit of the setpoint field
       */
 
     var mode = 'AUTO';
