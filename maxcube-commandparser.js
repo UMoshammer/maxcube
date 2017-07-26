@@ -172,10 +172,10 @@ function parseCommandDeviceList(payload) {
     var dataObj = [];
     var decodedPayload = new Buffer(payload, 'base64');
 
-    while (decodedPayload.length > 0) {
-        if (decodedPayload.length >= decodedPayload[0]) {
-            var deviceStatus = decodeDevice.call(this, decodedPayload);
-            dataObj.push(deviceStatus);
+  while (decodedPayload.length > 0) {
+    if (decodedPayload.length >= decodedPayload[0]) {
+      var  deviceStatus = decodeDevice.call(this, decodedPayload);
+      dataObj.push(deviceStatus);
 
             decodedPayload = decodedPayload.slice(decodedPayload[0] + 1);
         }
